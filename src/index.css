@@ -61,14 +61,16 @@ code {
 }
 
 .datetime {
-  width: 60%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .countdown-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .countdown-box {
@@ -88,12 +90,23 @@ code {
 }
 
 .datetime__input {
-  margin-bottom: 30px;
+  width: 250px;
 }
 
-.datetime__input::-webkit-clear-button {
-  -webkit-appearance: none;
-  display: none;
+.datetime__input:focus {
+  border: 2px solid #fdc57b;
+  box-shadow: none;
+  outline: none;
+}
+
+.datetime__icon {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 8px;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 .datetime-input__display___10kTu {
@@ -107,4 +120,49 @@ code {
 .datetime-input__date___JuBJT {
   font-size: 1.5em !important;
   margin-right: 10px;
+}
+
+.todo__box-input {
+  width: 300px;
+  border-radius: 0;
+}
+
+.todo__box-input:focus {
+  border: 2px solid #fdc57b;
+  box-shadow: none;
+  outline: none;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+} 
+
+.todo__btn--add {
+  height: calc(1.5em + .75rem + 2px);
+  width: calc(1.5em + .75rem + 2px);
+  margin-left: 7px;
+  border: none;
+  background: #fdc57b;
+  color: #fff;
+}
+
+.todo__btn--del {
+  background: transparent;
+  color: #33313b;
+  border: none;
+}
+
+.todo__list {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.todo__list-item {
+  line-height: calc(1.5em + .75rem + 2px);
+  background: #eee;
+  border-left: 3px solid #fdc57b;
+  padding: 0 7px;
+  margin-bottom: 5px;
 }
